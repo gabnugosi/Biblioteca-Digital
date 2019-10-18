@@ -1,4 +1,4 @@
-package projeto_biblioteca_digital;
+package br.com.model;
 
 import java.sql.*;
 

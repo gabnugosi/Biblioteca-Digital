@@ -1,4 +1,4 @@
-package projeto_biblioteca_digital;
+package br.com.model;
 
 public class Autor {
 	private int id;
