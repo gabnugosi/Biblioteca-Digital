@@ -3,7 +3,9 @@ package projeto_biblioteca_digital;
 import java.sql.*;
 
 public class Main {
-
+/*
+ * Exemplo de servlet:
+ * https://github.com/rafaelpevidor/produto-crud-jsp/blob/master/src/br/com/psystems/crud/controller/AppServlet.java*/
 	public static void main(String[] args) {
 		String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=BDIGITAL_201902";
 		
