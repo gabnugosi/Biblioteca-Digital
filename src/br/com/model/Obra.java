@@ -1,4 +1,4 @@
-package projeto_biblioteca_digital;
+package br.com.model;
 
 public class Obra {
 	private int id;
@@ -7,6 +7,8 @@ public class Obra {
 	private String tombo;
 	private String ano;
 
+	public Obra() {}
+	
 	public Obra(int id, String nome, int edicao, String tombo, String ano) {
 		super();
 		this.id = id;
@@ -55,5 +57,7 @@ public class Obra {
 	public void setAno(String ano) {
 		this.ano = ano;
 	}
+	
+
 
 }
