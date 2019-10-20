@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class ServletMVC
  */
 @WebServlet("/cart.html")
-public class reservaController extends HttpServlet {
+public class ReservaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public reservaController() {
+    public ReservaServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

@@ -1,17 +1,48 @@
 package br.com.DAO;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.conexao.Conexao;
+import br.com.exception.DAOException;
 import br.com.model.Obra;
+import br.com.DAO.*;
+
 
 //https://www.devmedia.com.br/implementando-o-data-access-object-no-java-ee/33339
 public class ObraDAO {
-	public static List<Obra> listaObra = null;
+	//public static List<Obra> listaObra = null;
 	
-	public ObraDAO() {
+	public void inserir (Obra obra) throws DAOException {
+		Connection connection = Conexao.getConnection();
+		PreparedStatement pstm; 
+		String query = "insert into obra (nome, edicao, tombo, ano) values (?, ?, ?, ?)";
 		
-		List<Obra> res= new ArrayList();
-        Connection conn= null;
-        PreparedStatement pstmt= null;
-        ResultSet rs= null;
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, obra.getNome());
+			pstm.setInt(2, obra.getEdicao());
+			pstm.setString(3, obra.getTombo());
+			pstm.setString(4, obra.getAno());
+			pstm.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	//listar
+	public ObraDAO() {
+		/*
+		private List<Obra> obras= new ArrayList<>();
+        private Connection conn= null;
+        private PreparedStatement pstmt= null;
+        private ResultSet rs= null;
         
         try {
             conn= createConnection();
@@ -19,7 +50,7 @@ public class ObraDAO {
             rs= pstmt.executeQuery();
  
             while(rs.next()){
-                res.add(
+            	obras.add(
                     new Caterer(rs.getLong("id"), rs.getString("name"))
                 );
             }
@@ -36,7 +67,7 @@ public class ObraDAO {
                 throw new RuntimeException(e);
             }
         }
-        return res;    
+        return obras;    */
 	        
 	}
 }
