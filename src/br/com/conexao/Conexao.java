@@ -1,8 +1,10 @@
 package br.com.conexao;
 
+import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import br.com.exception.DAOException;
@@ -85,11 +87,11 @@ public class Conexao {
 				}
 			}
 			
-			public static void closeAll(Connection connection, Statement statement, ResultSet resultset) throws DAOException {
+			public static void closeAll(Connection connection, PreparedStatement pstm, ResultSet resultset) throws DAOException {
 				
 				String mensagem =  "Conjunto de resultados do banco de dados fechado com sucesso.";
 				
-				closeConnectionAndStatement(connection, statement);
+				closeConnectionAndStatement(connection, pstm);
 				
 				try {
 					if (null != resultset) {
