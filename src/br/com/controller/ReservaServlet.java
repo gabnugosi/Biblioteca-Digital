@@ -39,7 +39,7 @@ public class ReservaServlet extends HttpServlet {
 		
 		/*Verificar a necessidade e incluir qual utilizar*/
 		String titulo= request.getParameter("titulo");
-		String = request.getParameter("titulo");
+		
 	}
 
 }

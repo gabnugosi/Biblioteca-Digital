@@ -1,6 +1,6 @@
 package br.com.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Reserva {
 		private int id;
@@ -11,6 +11,8 @@ public class Reserva {
 		private int idUser;
 		
 		
+		public Reserva() {}
+
 		public Reserva(int id, Date dtHoraReserva, int prazoReserva, String situacaoReserva, int idObra, int idUser) {
 			super();
 			this.id = id;

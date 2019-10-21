@@ -36,7 +36,7 @@ public class ObraDAO {
 		}
 	}
 	
-	//listar
+	//listar verificar de acordo com o reservaDAO
 	public ObraDAO() {
 		/*
 		private List<Obra> obras= new ArrayList<>();
